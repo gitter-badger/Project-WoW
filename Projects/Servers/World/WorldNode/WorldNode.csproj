@@ -78,6 +78,7 @@
     <Compile Include="Network\NodeSession.cs" />
     <Compile Include="Packets\Client\LogoutRequest.cs" />
     <Compile Include="Packets\Client\QueuedMessagesEnd.cs" />
+    <Compile Include="Packets\Client\RequestCemeteryList.cs" />
     <Compile Include="Packets\Client\ViolenceLevel.cs" />
     <Compile Include="Packets\Handlers\AuthHandler.cs" />
     <Compile Include="Packets\Handlers\MiscHandler.cs" />
@@ -85,6 +86,7 @@
     <Compile Include="Packets\Handlers\PlayerHandler.cs" />
     <Compile Include="Packets\PacketManager.cs" />
     <Compile Include="Packets\Server\LogoutResponse.cs" />
+    <Compile Include="Packets\Server\RequestCemeteryListResponse.cs" />
     <Compile Include="WorldNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

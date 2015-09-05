@@ -6,8 +6,10 @@ namespace WorldNode.Constants.Net
     // Value '0x2000' means not updated/implemented
     enum ServerMessage : ushort
     {
-        #region Misc
         LogoutResponse = 0x00E4,
+        RequestCemeteryListResponse = 0x0E71,
+
+        #region Misc
         #endregion
 
         #region RealmConnection
