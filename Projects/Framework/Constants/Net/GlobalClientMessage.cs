@@ -17,7 +17,8 @@ namespace Framework.Constants.Net
         PlayerLogin                 = 0x03F9,
 
         DBQueryBulk                 = 0x03E2,
-        
+        QueuedMessagesEnd           = 0x0130,
+
         BattlePayGetPurchaseList    = 0x03B9,
     }
 }

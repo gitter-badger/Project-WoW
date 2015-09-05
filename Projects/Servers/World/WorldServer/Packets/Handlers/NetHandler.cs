@@ -100,7 +100,7 @@ namespace WorldServer.Packets.Handlers
         }
 
         
-        [Message(ClientMessage.QueuedMessagesEnd, SessionState.All)]
+        [GlobalMessage(GlobalClientMessage.QueuedMessagesEnd, SessionState.All)]
         public static void HandlerQueuedMessagesEnd(QueuedMessagesEnd queuedMessagedEnd, WorldSession session)
         {
             //not implemented 

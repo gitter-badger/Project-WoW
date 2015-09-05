@@ -17,7 +17,6 @@ namespace WorldServer.Constants.Net
         #endregion
 
         #region UserClient
-        QueuedMessagesEnd               = 0x0130,
 
         UITimeRequest                   = 0x0339,
         #endregion
