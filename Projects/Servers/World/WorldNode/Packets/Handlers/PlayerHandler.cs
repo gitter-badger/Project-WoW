@@ -1,15 +1,4 @@
-﻿using System;
-using System.Security.Cryptography;
-using System.Text;
-using Framework.Attributes;
-using Framework.Constants.Account;
-using Framework.Constants.Net;
-using Framework.Database;
-using Framework.Database.Auth.Entities;
-using Framework.Misc;
-using Framework.Packets.Client.Authentication;
-using Framework.Packets.Server.Net;
-using WorldNode.Managers;
+﻿using Framework.Constants.Account;
 using WorldNode.Network;
 using WorldNode.Attributes;
 using WorldNode.Constants.Net;

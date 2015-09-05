@@ -18,6 +18,6 @@ namespace Framework.Constants.Net
 
         DBQueryBulk          = 0x03E2,
 
-
+        QueuedMessagesEnd = 0x0130,
     }
 }
