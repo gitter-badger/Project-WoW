@@ -16,6 +16,7 @@ namespace WorldServer.Constants.Net
         #endregion
 
         #region UserClient
+            QueuedMessagesEnd = 0x0130,
         #endregion
     }
 }
