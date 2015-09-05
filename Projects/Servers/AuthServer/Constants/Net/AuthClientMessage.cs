@@ -16,6 +16,7 @@ namespace AuthServer.Constants.Net
         #region WoWRealm
         ListSubscribeRequest = (0x00 + 0x3F) << AuthChannel.WoWRealm,
         JoinRequest          = (0x08 + 0x3F) << AuthChannel.WoWRealm,
+
         #endregion
         #region HTTP
         Receive              = 0x8C0,

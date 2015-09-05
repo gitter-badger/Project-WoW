@@ -1,6 +1,7 @@
 ﻿// Copyright (c) Multi-Emu.
 // Licensed under the MIT license. See LICENSE file in the project root for full license information.
 
+using System;
 using System.Linq;
 using AuthServer.Attributes;
 using AuthServer.Constants.Authentication;
@@ -91,7 +92,7 @@ namespace AuthServer.Network.Packets.Handlers
                                 return;
                             }
                             else
-                                session.GameAccount = session.GameAccounts[0];
+                                session.GameAccount = session.GameAccounts.FirstOrDefault();
                         }
 
                         if (session.GameAccount == null)
@@ -122,7 +123,7 @@ namespace AuthServer.Network.Packets.Handlers
 
                             // Assign valid game accounts for the account
                             if (session.Account.GameAccounts != null)
-                                session.GameAccounts = session.Account.GameAccounts.Where(ga => ga.Game == client.Game).ToList();
+                                session.GameAccounts = session.Account.GameAccounts.Where(ga => ga.Game.Equals(client.Game, StringComparison.OrdinalIgnoreCase)).ToList();
 
                             SendProofValidation(client, clientChallenge);
                         }

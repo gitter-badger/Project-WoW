@@ -15,5 +15,9 @@ namespace Framework.Constants.Net
         #endregion
 
         PlayerLogin          = 0x03F9,
+
+        DBQueryBulk          = 0x03E2,
+
+
     }
 }

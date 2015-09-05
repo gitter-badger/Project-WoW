@@ -36,7 +36,7 @@ namespace CharacterServer.Packets.Handlers
                 session.Account = DB.Auth.Single<Account>(a => a.Id == accountId);
 
                 if (session.Account != null)
-                    session.GameAccount = session.Account.GameAccounts.SingleOrDefault(ga => ga.Index == gameIndex);
+                    session.GameAccount = session.Account.GameAccounts.FirstOrDefault(ga => ga.Index == gameIndex);
 
                 if (session.GameAccount != null)
                     session.Crypt = new WoWCrypt(session.GameAccount.SessionKey.ToByteArray());

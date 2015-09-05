@@ -16,6 +16,8 @@ namespace WorldServer.Constants.Net
         #endregion
 
         #region UserClient
+
+        UITimeRequest = 0x0339,
         #endregion
     }
 }

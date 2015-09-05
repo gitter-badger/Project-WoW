@@ -7,6 +7,8 @@ namespace WorldServer.Constants.Net
     enum ServerMessage : ushort
     {
         AccountDataTimes   = 0x09FB,
+        UITime             = 0x1C2A,
+
         InitialKnownSpells = 0x1E0A,
         ObjectUpdate       = 0x0C59,
     }

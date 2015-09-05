@@ -115,7 +115,7 @@ namespace CharacterServer.Network
 
                 ExceptionLog.Write(ex);
 
-                Log.Error(ex.Message);
+                Log.Error(ex.ToString());
             }
         }
 
@@ -164,7 +164,7 @@ namespace CharacterServer.Network
 
                 ExceptionLog.Write(ex);
 
-                Log.Error(ex.Message);
+                Log.Error(ex.ToString());
             }
         }
 
