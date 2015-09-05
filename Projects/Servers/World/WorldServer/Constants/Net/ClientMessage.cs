@@ -7,6 +7,7 @@ namespace WorldServer.Constants.Net
     public enum ClientMessage : ushort
     {
         #region Account
+        RequestAccountData              = 0x09F9,
         #endregion
 
         #region ChatEntity
@@ -16,9 +17,9 @@ namespace WorldServer.Constants.Net
         #endregion
 
         #region UserClient
-        QueuedMessagesEnd = 0x0130,
+        QueuedMessagesEnd               = 0x0130,
 
-        UITimeRequest = 0x0339,
+        UITimeRequest                   = 0x0339,
         #endregion
     }
 }

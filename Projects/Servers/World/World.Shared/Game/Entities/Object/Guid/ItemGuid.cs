@@ -6,7 +6,7 @@ using Framework.Objects;
 
 namespace World.Shared.Game.Entities.Object.Guid
 {
-    class ItemGuid : SmartGuid
+    public class ItemGuid : SmartGuid
     {
         public ItemGuid()
         {

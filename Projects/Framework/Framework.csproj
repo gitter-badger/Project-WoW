@@ -161,6 +161,7 @@
     <Compile Include="Objects\Vector3.cs" />
     <Compile Include="Packets\Client\Authentication\AuthContinuedSession.cs" />
     <Compile Include="Packets\Client\Authentication\TransferInitiate.cs" />
+    <Compile Include="Packets\Client\Query\DBQueryBulk.cs" />
     <Compile Include="Packets\Client\Net\LogDisconnect.cs" />
     <Compile Include="Packets\Client\Net\Ping.cs" />
     <Compile Include="Packets\Client\Net\SuspendCommsAck.cs" />

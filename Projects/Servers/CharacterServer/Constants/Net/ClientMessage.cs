@@ -25,7 +25,6 @@ namespace CharacterServer.Constants.Net
         UndeleteCharacter                    = 0x2000,
         GetUndeleteCharacterCooldownStatus   = 0x2000,
 
-        BattlePayGetPurchaseList             = 0x03B9,
 
         #endregion
     }

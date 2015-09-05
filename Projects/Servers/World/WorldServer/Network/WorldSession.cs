@@ -126,7 +126,7 @@ namespace WorldServer.Network
 
                 ExceptionLog.Write(ex);
 
-                Log.Error(ex.Message);
+                Log.Error(ex.ToString());
             }
         }
 
@@ -178,7 +178,7 @@ namespace WorldServer.Network
 
                 ExceptionLog.Write(ex);
 
-                Log.Error(ex.Message);
+                Log.Error(ex.ToString());
             }
         }
 
