@@ -14,5 +14,14 @@ namespace WorldNode.Packets.Handlers
         {
             // not implemented
         }
+
+        
+        [Message(ClientMessage.RequestCemeteryList, SessionState.All)]
+        public static void HandlerRequestCemeteryList(RequestCemeteryList requestCemeteryList, NodeSession session)
+        {
+            // not implemented
+            //await session.Send(new RequestCemeteryListResponse { IsGossipTriggered = false, Count = 0 } );
+        }
+        
     }
 }
