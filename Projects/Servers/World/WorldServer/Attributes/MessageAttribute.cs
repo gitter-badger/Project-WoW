@@ -11,12 +11,12 @@ namespace WorldServer.Attributes
     public sealed class MessageAttribute : Attribute
     {
         public ClientMessage Message { get; }
-        public SessionState State;
+        public SessionState State { get; }
 
-        public MessageAttribute(ClientMessage message, SessionState session)
+        public MessageAttribute(ClientMessage message, SessionState state)
         {
             Message = message;
-            State = session;
+            State = state;
         }
     }
 }

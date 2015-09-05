@@ -13,6 +13,9 @@ using Framework.Packets.Client.Net;
 using Framework.Packets.Server.Net;
 using WorldServer.Managers;
 using WorldServer.Network;
+using WorldServer.Constants.Net;
+using WorldServer.Attributes;
+using WorldServer.Packets.Client.Character;
 
 namespace WorldServer.Packets.Handlers
 {
@@ -90,10 +93,18 @@ namespace WorldServer.Packets.Handlers
         }
 
         [GlobalMessage(GlobalClientMessage.SuspendCommsAck, SessionState.All)]
-        public static async void HandleSuspendCommsAck(SuspendCommsAck suspendCommsAck, WorldSession session)
+        public static async void HandlerSuspendCommsAck(SuspendCommsAck suspendCommsAck, WorldSession session)
         {
             // Resume packets on main connection
             await session.Send(new ResumeComms());
         }
+
+        
+        [Message(ClientMessage.QueuedMessagesEnd, SessionState.All)]
+        public static void HandlerQueuedMessagesEnd(QueuedMessagesEnd queuedMessagedEnd, WorldSession session)
+        {
+            //not implemented 
+        }
+        
     }
 }
