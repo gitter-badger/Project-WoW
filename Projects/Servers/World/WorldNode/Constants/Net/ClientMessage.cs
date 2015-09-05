@@ -7,6 +7,7 @@ namespace WorldNode.Constants.Net
     public enum ClientMessage : ushort
     {
         #region Player
+        LogoutRequest = 0x0C5E,
         #endregion
 
         #region PlayerGameEvent

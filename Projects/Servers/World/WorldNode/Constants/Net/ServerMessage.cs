@@ -7,6 +7,7 @@ namespace WorldNode.Constants.Net
     enum ServerMessage : ushort
     {
         #region Misc
+        LogoutResponse = 0x00E4,
         #endregion
 
         #region RealmConnection
