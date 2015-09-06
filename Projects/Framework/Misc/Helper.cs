@@ -8,7 +8,7 @@ using Framework.Logging;
 
 namespace Framework.Misc
 {
-    public class Helper
+    public static class Helper
     {
         public static bool CheckConnection(string ip, int port)
         {
@@ -48,13 +48,31 @@ namespace Framework.Misc
             Log.Normal($"Starting Project WoW {serverName}...");
         }
 
+        
+        static DateTime baseDate = new DateTime(1970, 1, 1);
+
         public static uint GetUnixTime()
         {
-            var baseDate = new DateTime(1970, 1, 1);
             var currentDate = DateTime.Now;
             var ts = currentDate - baseDate;
 
             return (uint)ts.TotalSeconds;
+        }
+
+        public static DateTime FromUnixTime(uint unixtime)
+        {
+            return baseDate.AddSeconds(unixtime);
+        }
+
+        public static uint ToUnixTime(DateTime time)
+        {
+            return (uint)time.Subtract(baseDate).TotalSeconds;
+        }
+
+        //Needs testing
+        public static byte[] ToWoWString(string src)
+        {
+            return Encoding.UTF8.GetBytes(src);
         }
 
         public static uint Adler32(byte[] data)

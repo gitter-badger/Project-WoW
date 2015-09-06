@@ -11,13 +11,13 @@ using WorldServer.Packets.Structures.Account;
 
 namespace WorldServer.Packets.Server.Misc
 {
-    class UpdateAccountData : ServerPacket
+    class UpdateAccountData : TwoSidePacket
     {
         public PlayerGuid PlayerGuid { get; set; }
-        public UInt32 Time { get; set; }
-        //public UInt32 DecompressedSize { get; set; }
+        public DateTime Time { get; set; }
+        public UInt32 DecompressedSize { get; set; }
         public DataType Type { get; set; }
-        //public UInt32 CompressedSize { get; set; }
+        public UInt32 CompressedSize { get; set; }
         public string Data { get; set; }
 
         public UpdateAccountData() : base(ServerMessage.UpdateAccountData) { }
@@ -25,8 +25,16 @@ namespace WorldServer.Packets.Server.Misc
         public override void Write()
         {
             Packet.Write(PlayerGuid);
-            Packet.Write(Helper.GetUnixTime());
+            Packet.Write(Helper.ToUnixTime(Time));
 
+            var strBytes = Helper.ToWoWString(Data);
+            
+        }
+
+        public override void Read()
+        {
+            PlayerGuid = Packet.ReadGuid<PlayerGuid>();
+            Time = Helper.FromUnixTime(Packet.Read<UInt32>());
         }
     }
 }

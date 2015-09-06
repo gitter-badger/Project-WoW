@@ -147,6 +147,7 @@
     <Compile Include="Misc\Extensions.cs" />
     <Compile Include="Misc\Helper.cs" />
     <Compile Include="Misc\Singleton.cs" />
+    <Compile Include="Network\Packets\TwoSidePacket.cs" />
     <Compile Include="Network\Packets\ClientPacket.cs" />
     <Compile Include="Network\Packets\IServerStruct.cs" />
     <Compile Include="Network\Packets\PacketWriterExtensions.cs" />
